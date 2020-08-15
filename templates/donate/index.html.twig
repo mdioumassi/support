@@ -1,0 +1,245 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DonateController!{% endblock %}
+
+{% block body %}
+<style>
+    #page-wrapper{width: 60%; margin-left: auto; margin-right: auto}
+    .size{width: 95%}
+    #amount-list-once li {list-style-type: none;}
+    .amount ul li label span {
+        font-size: 16px;
+        font-weight: 900;
+        text-align: center;
+        display: table;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 8px;
+        color: #EE7203;
+        border: 2px solid #EE7203;
+        background: #FFF;
+        background-image: none;
+        box-shadow: none;
+        transition: none;
+        padding: 0;
+        padding-left: 12px;
+        padding-right: 12px;
+        cursor: pointer;
+    }
+    .amount ul.radio-inline {
+        display: flex;
+    }
+    fieldset {
+        display: block;
+        margin-inline-start: 2px;
+        margin-inline-end: 2px;
+        padding-block-start: 0.35em;
+        padding-inline-start: 0.75em;
+        padding-inline-end: 0.75em;
+        padding-block-end: 0.625em;
+        min-inline-size: min-content;
+        border-style: groove;
+        border-color: threedface;
+        border-image: initial;
+    }
+    .amount ul.radio-inline {
+        padding-left: 15px;
+    }
+    /*input[type="radio"] {
+        cursor: default;
+        display: none;
+    }*/
+    .radio-inline li {
+        white-space: nowrap;
+        margin: 0 6px;
+        padding-bottom: 6px;
+    }
+    .free-amount label {
+        color: #EE7203;
+        font-size: 14px;
+        font-weight: 400;
+        padding-left: 4px;
+    }
+    .free-amount input {
+        height: 40px;
+        border: 2px solid #EE7203;
+        background: #fff;
+        font-size: 16px;
+        color: #EE7203;
+        border-radius: 8px;
+        font-weight: 900;
+    }
+    .free-amount input {
+        margin-right: 4px;
+        width: 80%;
+    }
+    .payment h4 {
+        background-color: #005FB6;
+        color: #FFF;
+        text-shadow: none;
+        text-align: center;
+        font-weight: 900;
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 24px;
+    }
+    label.required:before {
+        content: "*";
+        color: red;
+    }
+    .inline{
+        display: inline-flex;
+    }
+    #donate_amountOnce{display: none}
+</style>
+    <div id="page-wrapper">
+        <div class="w3-row">
+            {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+                <!--MON DON -->
+                <div class="w3-col s4">
+                    <div class="w3-section size">
+                        <header class="w3-container w3-green">
+                            <h3>1. MON DON</h3>
+                        </header>
+                        <div id="bloc-amount-once">
+                            <fieldset class="amount">
+{#                                <p>#}
+{#                                    {{ form_widget(form.amountOnce, {'attr':{'class': 'inline w3-radio w3-margin-left'}}) }}#}
+{#                                </p>#}
+                                <ul class="radio-inline" id="amount-list-once">
+                                    <li>
+                                        <label>
+                                            <span id="value_of_amount-once-20">20€</span>
+                                            <input type="radio" id="donate_amountOnce_0" name="donate[amountOnce]" value="20" />
+{#                                            <input autocomplete="false" type="radio" name="amount-once" value="20" id="amount-once-20">#}
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <span id="value_of_amount-once-20">30€</span>
+                                            <input type="radio" id="donate_amountOnce_1" name="donate[amountOnce]" value="30" />
+{#                                            <input autocomplete="false" type="radio" name="amount-once" value="30" id="amount-once-30">#}
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <span id="value_of_amount-once-20">40€</span>
+                                            <input type="radio" id="donate_amountOnce_2" name="donate[amountOnce]" value="40"  />
+{#                                            <input autocomplete="false" type="radio" name="amount-once" value="40" id="amount-once-40">#}
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <span id="value_of_amount-once-20">50€</span>
+                                            <input type="radio" id="donate_amountOnce_3" name="donate[amountOnce]" value="50" />
+                                        </label>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                            <fieldset class="free-amount">
+                                <p>
+                                    {{ form_label(form.amountFree, ' Montant libre') }}
+                                    {{ form_widget(form.amountFree) }}
+                                </p>
+                            </fieldset>
+                        </div>
+
+                        <footer class="w3-container w3-blue">
+                            <h5>Footer</h5>
+                        </footer>
+                    </div>
+                </div>
+                <!--MES COORDONNEES -->
+                <div class="w3-col s4">
+                    <div class="w3-section size">
+                        <header class="w3-container w3-green">
+                            <h3>2. MES COORDONN&Eacute;ES</h3>
+                        </header>
+                        <div id="">
+                            {{ form_label(form.email, 'Email') }}
+                            {{ form_widget(form.email, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
+                            {{ form_errors(form.email) }}
+
+                            {{ form_label(form.civility, 'Civilité') }}
+                            {{ form_widget(form.civility, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
+                            {{ form_errors(form.civility) }}
+
+                            {{ form_label(form.firstname, 'Prénom') }}
+                            {{ form_widget(form.firstname, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
+                            {{ form_errors(form.firstname) }}
+
+                            {{ form_label(form.lastname, 'Nom') }}
+                            {{ form_widget(form.lastname, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
+                            {{ form_errors(form.lastname) }}
+
+                            {{ form_label(form.address, 'Adresse') }}
+                            {{ form_widget(form.address, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
+                            {{ form_errors(form.address) }}
+
+                            {{ form_label(form.address_complement, 'Complément adresse') }}
+                            {{ form_widget(form.address_complement, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
+                            <div class="w3-row">
+                                <div class="w3-half">
+                                    {{ form_label(form.postal_code, 'Code postal') }}
+                                    {{ form_widget(form.postal_code, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
+                                    {{ form_errors(form.postal_code) }}
+                                </div>
+                                <div class="w3-half">
+                                    {{ form_label(form.city, 'Ville') }}
+                                    {{ form_widget(form.city, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
+                                    {{ form_errors(form.postal_code) }}
+                                </div>
+                            </div>
+                            {{ form_label(form.country, 'Pays') }}
+                            {{ form_widget(form.country, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
+                        </div>
+                        {{ form_label(form.mobile_phone, 'Téléphone') }}
+                        {{ form_widget(form.mobile_phone, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
+                        {{ form_label(form.receive_info, 'Oui, j\'accepte de recevoir des informations de Yattim-mr par e-mail et téléphone') }}
+                        {{ form_widget(form.receive_info, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
+                        <p>
+                            <span style="color: #ff0000; font-weight: bold">*</span> Champs obligatoires (ces informations sont indispensables pour bénéficier de votre réduction fiscale)
+                        </p>
+                        <footer class="w3-container w3-blue w3-margin-top">
+                            <h5>Footer</h5>
+                        </footer>
+                    </div>
+                </div>
+                <!--MON REGLEMENT -->
+                <div class="w3-col s4 ">
+                    <div class="w3-section size">
+                        <header class="w3-container w3-green">
+                            <h3>3. MON R&Egrave;GLEMENT</h3>
+                        </header>
+
+                    {#    <div class="step-content">
+                            <div id="security-info">
+                                <p>Plateforme de paiement 100% sécurisée</p>
+                            </div>
+                            <div class="payment">
+                                <div id="payment_modes_once">
+                                    <fieldset id="card-type">
+                                        <h4><span class="payment_mode_title">Sélectionnez votre carte de paiement</span></h4>
+                                        <p>
+                                            <select name="cardtype" id="card">
+                                                <option value=""></option>
+                                                <option value="mastercard"> Mastercard</option>
+                                                <option value="visa"> Visa</option>
+                                                <option value="cartebleue"> Carte Bleue</option>
+                                            </select>
+                                        </p>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>#}
+                                    <button type="submit" class="w3-btn w3-blue">Je confirme mon don</button>
+                       <footer class="w3-container w3-blue w3-margin-top">
+                            <h5>Footer</h5>
+                        </footer>
+                    </div>
+                </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}
