@@ -93,6 +93,11 @@
         display: inline-flex;
     }
     #do_donate_amountOnce{display: none}
+    .checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
+        position: absolute;
+        margin-top: 4px\9;
+        margin-left: 21px;
+    }
 </style>
     <div id="page-wrapper">
         <div class="w3-row">
@@ -105,9 +110,6 @@
                         </header>
                         <div id="bloc-amount-once">
                             <fieldset class="amount">
-{#                                <p>#}
-{#                                    {{ form_widget(form.amountOnce, {'attr':{'class': 'inline w3-radio w3-margin-left'}}) }}#}
-{#                                </p>#}
                                 <ul class="radio-inline" id="amount-list-once">
                                     <li>
                                         <label>
@@ -243,4 +245,14 @@
             {{ form_end(form) }}
         </div>
     </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        $('document').ready(function (){
+            $("#value_of_amount-once-20").on('click', function () {
+                $(this).css("border")
+            })
+        });
+    </script>
 {% endblock %}
