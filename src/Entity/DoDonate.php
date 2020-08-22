@@ -2,14 +2,15 @@
 
 namespace App\Entity;
 
-use App\Repository\DonateRepository;
+use App\Repository\DoDonateRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
+
 /**
- * @ORM\Entity(repositoryClass=DonateRepository::class)
+ * @ORM\Entity(repositoryClass=DoDonateRepository::class)
  */
-class Donate
+class DoDonate
 {
     /**
      * @ORM\Id()
@@ -20,42 +21,55 @@ class Donate
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank(message="Le prénom obligatoire.")
+     * @Assert\NotBlank(message="Le prénom est obligatoire.")
      */
     private $firstname;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank(message="Le om de famille obligatoire.")
+     * @Assert\NotBlank(message="Le nom est obligatoire")
      */
     private $lastname;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank(message="Veuillez renseigner une adresse.")
+     * @Assert\NotBlank(message="L'email est obligatoire")
+     */
+    private $email;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="la civilité est obligatoire")
+     */
+    private $civility;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="l'adresse est obligatoire")
      */
     private $address;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
+     *
      */
     private $address_complement;
 
     /**
      * @ORM\Column(type="integer")
-     * @Assert\NotBlank(message="Veuillez choisir un code postal.")
+     * @Assert\NotBlank(message="Le code postal est obligatoire.")
      */
     private $postal_code;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank(message="Veuillez choisir une ville.")
+     * @Assert\NotBlank(message="La ville est obligatoire.")
      */
     private $city;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank(message="Veuillez choisir un pays.")
+     * @Assert\NotBlank(message="Le pays est obligatoire.")
      */
     private $country;
 
@@ -65,6 +79,17 @@ class Donate
     private $mobile_phone;
 
     /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $amount_free;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     *
+     */
+    private $amount_once;
+
+    /**
      * @ORM\Column(type="boolean", nullable=true)
      */
     private $receive_info;
@@ -72,29 +97,7 @@ class Donate
     /**
      * @ORM\Column(type="datetime")
      */
-    private $createdAt;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $amountOnce;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $amountFree;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank(message="Veuillez saisir une adresse email.")
-     */
-    private $email;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank(message="Veuillez choisir une civilité")
-     */
-    private $civility;
+    private $created_at;
 
     public function getId(): ?int
     {
@@ -121,6 +124,30 @@ class Donate
     public function setLastname(string $lastname): self
     {
         $this->lastname = $lastname;
+
+        return $this;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): self
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    public function getCivility(): ?string
+    {
+        return $this->civility;
+    }
+
+    public function setCivility(string $civility): self
+    {
+        $this->civility = $civility;
 
         return $this;
     }
@@ -190,9 +217,33 @@ class Donate
         return $this->mobile_phone;
     }
 
-    public function setMobilePhone(?int $mobile_phone): self
+    public function setMobilePhone(int $mobile_phone): self
     {
         $this->mobile_phone = $mobile_phone;
+
+        return $this;
+    }
+
+    public function getAmountFree(): ?int
+    {
+        return $this->amount_free;
+    }
+
+    public function setAmountFree(?int $amount_free): self
+    {
+        $this->amount_free = $amount_free;
+
+        return $this;
+    }
+
+    public function getAmountOnce(): ?int
+    {
+        return $this->amount_once;
+    }
+
+    public function setAmountOnce(?int $amount_once): self
+    {
+        $this->amount_once = $amount_once;
 
         return $this;
     }
@@ -211,60 +262,12 @@ class Donate
 
     public function getCreatedAt(): ?\DateTimeInterface
     {
-        return $this->createdAt;
+        return $this->created_at;
     }
 
-    public function setCreatedAt(\DateTimeInterface $createdAt): self
+    public function setCreatedAt(\DateTimeInterface $created_at): self
     {
-        $this->createdAt = $createdAt;
-
-        return $this;
-    }
-
-    public function getAmountOnce(): ?int
-    {
-        return $this->amountOnce;
-    }
-
-    public function setAmountOnce(int $amountOnce): self
-    {
-        $this->amountOnce = $amountOnce;
-
-        return $this;
-    }
-
-    public function getAmountFree(): ?int
-    {
-        return $this->amountFree;
-    }
-
-    public function setAmountFree(int $amountFree): self
-    {
-        $this->amountFree = $amountFree;
-
-        return $this;
-    }
-
-    public function getEmail(): ?string
-    {
-        return $this->email;
-    }
-
-    public function setEmail(string $email): self
-    {
-        $this->email = $email;
-
-        return $this;
-    }
-
-    public function getCivility(): ?string
-    {
-        return $this->civility;
-    }
-
-    public function setCivility(string $civility): self
-    {
-        $this->civility = $civility;
+        $this->created_at = $created_at;
 
         return $this;
     }

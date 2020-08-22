@@ -4,7 +4,8 @@
 
 {% block body %}
 <style>
-    #page-wrapper{width: 60%; margin-left: auto; margin-right: auto}
+    #page-wrapper{width: 75%; margin-left: auto; margin-right: auto}
+    h3{font-size: 23px}
     .size{width: 95%}
     #amount-list-once li {list-style-type: none;}
     .amount ul li label span {
@@ -91,7 +92,7 @@
     .inline{
         display: inline-flex;
     }
-    #donate_amountOnce{display: none}
+    #do_donate_amountOnce{display: none}
 </style>
     <div id="page-wrapper">
         <div class="w3-row">
@@ -111,36 +112,36 @@
                                     <li>
                                         <label>
                                             <span id="value_of_amount-once-20">20€</span>
-                                            <input type="radio" id="donate_amountOnce_0" name="donate[amountOnce]" value="20" />
+                                            <input type="radio" id="donate_amountOnce_0" name="do_donate[amountOnce]" value="20" />
 {#                                            <input autocomplete="false" type="radio" name="amount-once" value="20" id="amount-once-20">#}
                                         </label>
                                     </li>
                                     <li>
                                         <label>
                                             <span id="value_of_amount-once-20">30€</span>
-                                            <input type="radio" id="donate_amountOnce_1" name="donate[amountOnce]" value="30" />
+                                            <input type="radio" id="do_donate_amountOnce_1" name="do_donate[amountOnce]" value="30" />
 {#                                            <input autocomplete="false" type="radio" name="amount-once" value="30" id="amount-once-30">#}
                                         </label>
                                     </li>
                                     <li>
                                         <label>
                                             <span id="value_of_amount-once-20">40€</span>
-                                            <input type="radio" id="donate_amountOnce_2" name="donate[amountOnce]" value="40"  />
+                                            <input type="radio" id="do_donate_amountOnce_2" name="do_donate[amountOnce]" value="40"  />
 {#                                            <input autocomplete="false" type="radio" name="amount-once" value="40" id="amount-once-40">#}
                                         </label>
                                     </li>
                                     <li>
                                         <label>
                                             <span id="value_of_amount-once-20">50€</span>
-                                            <input type="radio" id="donate_amountOnce_3" name="donate[amountOnce]" value="50" />
+                                            <input type="radio" id="do_donate_amountOnce_3" name="do_donate[amountOnce]" value="50" />
                                         </label>
                                     </li>
                                 </ul>
                             </fieldset>
                             <fieldset class="free-amount">
                                 <p>
-                                    {{ form_label(form.amountFree, ' Montant libre') }}
-                                    {{ form_widget(form.amountFree) }}
+                                    {{ form_label(form.amount_free, ' Montant libre') }}
+                                    {{ form_widget(form.amount_free) }}
                                 </p>
                             </fieldset>
                         </div>

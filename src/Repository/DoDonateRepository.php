@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\DonateOLD;
+use App\Entity\DoDonate;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method DonateOLD|null find($id, $lockMode = null, $lockVersion = null)
- * @method DonateOLD|null findOneBy(array $criteria, array $orderBy = null)
- * @method DonateOLD[]    findAll()
- * @method DonateOLD[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method DoDonate|null find($id, $lockMode = null, $lockVersion = null)
+ * @method DoDonate|null findOneBy(array $criteria, array $orderBy = null)
+ * @method DoDonate[]    findAll()
+ * @method DoDonate[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class DonateRepository extends ServiceEntityRepository
+class DoDonateRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, DonateOLD::class);
+        parent::__construct($registry, DoDonate::class);
     }
 
     // /**
-    //  * @return Donate[] Returns an array of Donate objects
+    //  * @return DoDonate[] Returns an array of DoDonate objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class DonateRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?Donate
+    public function findOneBySomeField($value): ?DoDonate
     {
         return $this->createQueryBuilder('d')
             ->andWhere('d.exampleField = :val')
