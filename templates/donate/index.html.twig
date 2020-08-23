@@ -98,6 +98,15 @@
         margin-top: 4px\9;
         margin-left: 21px;
     }
+    #do_donate_receive_info{
+        position: relative;
+        left: 120px;
+        top: -30px;
+    }
+    #encart{
+        height: 465px;
+        border: 1px solid #f2f2f2;
+    }
 </style>
     <div id="page-wrapper">
         <div class="w3-row">
@@ -108,7 +117,7 @@
                         <header class="w3-container w3-green">
                             <h3>1. MON DON</h3>
                         </header>
-                        <div id="bloc-amount-once">
+                        <div id="encart"">
                             <fieldset class="amount">
                                 <ul class="radio-inline" id="amount-list-once">
                                     <li>
@@ -159,7 +168,7 @@
                         <header class="w3-container w3-green">
                             <h3>2. MES COORDONN&Eacute;ES</h3>
                         </header>
-                        <div id="" style="border:1px solid red">
+                        <div id="encart">
                             <div class="w3-row-padding">
                                 <div class="w3-half">
                                     {{ form_label(form.email, 'Email') }}
@@ -218,15 +227,15 @@
                                     {{ form_widget(form.mobile_phone, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
                                 </div>
                              </div>
-
-                            {{ form_label(form.receive_info, 'Oui, j\'accepte de recevoir des informations de Yattim-mr par e-mail et téléphone') }}
-                            {{ form_widget(form.receive_info, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
+                            <div class="w3-padding">
+                                {{ form_label(form.receive_info, 'Oui, j\'accepte de recevoir des informations de Yattim-mr par e-mail et téléphone') }}
+                                {{ form_widget(form.receive_info, {'attr': {'class': 'w3-check'}}) }}
+                            </div>
+                            <p class="w3-padding">
+                                <span style="color: #ff0000; font-weight: bold">*</span> Champs obligatoires (ces informations sont indispensables pour bénéficier de votre réduction fiscale)
+                            </p>
                         </div>
-
-                        <p>
-                            <span style="color: #ff0000; font-weight: bold">*</span> Champs obligatoires (ces informations sont indispensables pour bénéficier de votre réduction fiscale)
-                        </p>
-                        <footer class="w3-container w3-blue w3-margin-top">
+                        <footer class="w3-container w3-blue">
                             <h5>Footer</h5>
                         </footer>
                     </div>
@@ -237,7 +246,9 @@
                         <header class="w3-container w3-green">
                             <h3>3. MON R&Egrave;GLEMENT</h3>
                         </header>
-
+                    <div id="encart">
+                        <button type="submit" class="w3-btn w3-blue">Je confirme mon don</button>
+                    </div>
                     {#    <div class="step-content">
                             <div id="security-info">
                                 <p>Plateforme de paiement 100% sécurisée</p>
@@ -258,8 +269,8 @@
                                 </div>
                             </div>
                         </div>#}
-                                    <button type="submit" class="w3-btn w3-blue">Je confirme mon don</button>
-                       <footer class="w3-container w3-blue w3-margin-top">
+
+                       <footer class="w3-container w3-blue">
                             <h5>Footer</h5>
                         </footer>
                     </div>
