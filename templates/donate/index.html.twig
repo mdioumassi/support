@@ -4,7 +4,7 @@
 
 {% block body %}
 <style>
-    #page-wrapper{width: 75%; margin-left: auto; margin-right: auto}
+    #page-wrapper{width: 95%; margin-left: auto; margin-right: auto}
     h3{font-size: 23px}
     .size{width: 95%}
     #amount-list-once li {list-style-type: none;}
@@ -45,7 +45,7 @@
         border-image: initial;
     }
     .amount ul.radio-inline {
-        padding-left: 15px;
+        padding-left: 0px;
     }
     /*input[type="radio"] {
         cursor: default;
@@ -100,8 +100,9 @@
     }
     #do_donate_receive_info{
         position: relative;
-        left: 120px;
+        left: 12px;
         top: -30px;
+        float: right;
     }
     #encart{
         height: 465px;
@@ -112,7 +113,7 @@
         <div class="w3-row">
             {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
                 <!--MON DON -->
-                <div class="w3-col s4">
+                <div class="w3-col s3">
                     <div class="w3-section size">
                         <header class="w3-container w3-green">
                             <h3>1. MON DON</h3>
@@ -163,7 +164,7 @@
                     </div>
                 </div>
                 <!--MES COORDONNEES -->
-                <div class="w3-col s4">
+                <div class="w3-col s6">
                     <div class="w3-section size">
                         <header class="w3-container w3-green">
                             <h3>2. MES COORDONN&Eacute;ES</h3>
@@ -241,7 +242,7 @@
                     </div>
                 </div>
                 <!--MON REGLEMENT -->
-                <div class="w3-col s4 ">
+                <div class="w3-col s3 ">
                     <div class="w3-section size">
                         <header class="w3-container w3-green">
                             <h3>3. MON R&Egrave;GLEMENT</h3>
