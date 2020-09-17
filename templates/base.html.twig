@@ -2,14 +2,24 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>{% block title %}Yattim MR!{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('/css/global.css') }}" />
+        {% endblock %}
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
     </head>
     <body>
         {% block body %}{% endblock %}
-    {% block javascripts %}{% endblock %}
+
+        <script src="https://js.stripe.com/v3/"></script>
+        <script src="/js/client.js"></script>
+        {% block javascripts %}{% endblock %}
     </body>
 </html>

@@ -1,0 +1,116 @@
+#page-wrapper{width: 95%; margin-left: auto; margin-right: auto}
+h3{font-size: 23px}
+.size{width: 95%}
+#amount-list-once li {list-style-type: none;}
+.amount ul li label span {
+    font-size: 16px;
+    font-weight: 900;
+    text-align: center;
+    display: table;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 8px;
+    color: #EE7203;
+    border: 2px solid #EE7203;
+    background: #FFF;
+    background-image: none;
+    box-shadow: none;
+    transition: none;
+    padding: 0;
+    padding-left: 12px;
+    padding-right: 12px;
+    cursor: pointer;
+}
+.amount ul.radio-inline {
+    display: flex;
+}
+fieldset {
+    display: block;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+    border-style: groove;
+    border-color: threedface;
+    border-image: initial;
+}
+.amount ul.radio-inline {
+    padding-left: 0px;
+}
+/*input[type="radio"] {
+    cursor: default;
+    display: none;
+}*/
+.radio-inline li {
+    white-space: nowrap;
+    margin: 0 6px;
+    padding-bottom: 6px;
+}
+.free-amount label {
+    color: #EE7203;
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 4px;
+}
+.free-amount input {
+    height: 40px;
+    border: 2px solid #EE7203;
+    background: #fff;
+    font-size: 16px;
+    color: #EE7203;
+    border-radius: 8px;
+    font-weight: 900;
+}
+.free-amount input {
+    margin-right: 4px;
+    width: 80%;
+}
+.payment h4 {
+    background-color: #005FB6;
+    color: #FFF;
+    text-shadow: none;
+    text-align: center;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 24px;
+}
+label.required:before {
+    content: "*";
+    color: red;
+}
+.inline{
+    display: block;
+}
+#do_donate_amountOnce{display: block}
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
+    position: absolute;
+    margin-top: 4px\9;
+    margin-left: 21px;
+}
+#do_donate_receive_info{
+    position: relative;
+    left: 12px;
+    top: -30px;
+    float: right;
+}
+#encart{
+    height: 465px;
+    border: 1px solid #f2f2f2;
+}
+.strong{
+    font-weight: bold;
+    text-decoration: underline;
+}
+.recall{
+    padding: 14px ;
+    color: #EE7203;;
+}
+#security-info{
+    padding-left: 14px;
+    margin-top: -17px;
+}

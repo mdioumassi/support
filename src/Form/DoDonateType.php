@@ -42,13 +42,14 @@ class DoDonateType extends AbstractType
             ])
             ->add('mobile_phone')
             ->add('amount_free')
-            ->add('amountOnce',ChoiceType::class,array(
+          ->add('amountOnce',ChoiceType::class,array(
                 'choices'  => array(
                     '20€' => 20,
                     '30€' => 30,
                     '40€' => 40,
                     '50€' => 50
                 ),
+       //         'data' => '20',
                 'expanded' => true,
                 'multiple' => false,
                 'required' => false,
