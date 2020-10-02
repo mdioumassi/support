@@ -13,7 +13,7 @@ class StripeController extends AbstractController
      */
     public function stripe($amount)
     {
-       // dd($amount);
+        dd($amount);
         \Stripe\Stripe::setApiKey('sk_test_51HN5AkI9xYefOdXpd9CGGjjq4nnAYA7MjgRI3r6R1NP6tbGqxGM6ktsts4Ewd8LqLGpAKbZIe8gE6UnA6rJPJOUP002J5fIKKD');
 
         $intent = \Stripe\PaymentIntent::create([

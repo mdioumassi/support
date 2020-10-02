@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Faire un don!{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('/css/donate/style.css') }}" />
+{% endblock %}
+{% block body %}
+    <div id="page-wrapper">
+       <div id="id01" class="w3-modal">
+            <div class="w3-modal-content">
+
+                <header class="w3-container w3-teal">
+                <span onclick="document.getElementById('id01').style.display='none'"
+                class="w3-button w3-display-topright">&times;</span>
+                <h2>MON DON</h2>
+                </header>
+                <form method="post">      
+                     <fieldset class="amount W3-padding">
+                                <ul class="radio-inline" id="amount-list-once">
+                                    <li>
+                                        <label>
+                                            <span id="value_of_amount-once-20">20€</span>
+                                            {# <input type="radio" id="donate_amountOnce_0" name="do_donate[amountOnce]" /> #}
+                                           <input autocomplete="false" type="radio" name="amount-once" value="20" id="amount-once-20">
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <span id="value_of_amount-once-20">30€</span>
+                                            {# <input type="radio" id="do_donate_amountOnce_1" name="do_donate[amountOnce]"  /> #}
+                                           <input autocomplete="false" type="radio" name="amount-once" value="30" id="amount-once-30">
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <span id="value_of_amount-once-20">40€</span>
+                                            {# <input type="radio" id="do_donate_amountOnce_2" name="do_donate[amountOnce]" /> #}
+                                           <input autocomplete="false" type="radio" name="amount-once" value="40" id="amount-once-40">
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <span id="value_of_amount-once-20">50€</span>
+                                            {# <input type="radio" id="do_donate_amountOnce_3" name="do_donate[amountOnce]"  /> #}
+                                            <input autocomplete="false" type="radio" name="amount-once" value="50" id="amount-once-50">
+                                    </li>
+                                </ul>
+                    </fieldset>
+                    <fieldset class="free-amount  w3-padding-16">
+                         <label for="amount_free"> Montant libre</label>
+                         <input type="number" id="amount_free" name="amount-free">
+                        {# <p>
+                            {{ form_label(form.amount_free, ' Montant libre') }}
+                            {{ form_widget(form.amount_free) }}
+                        </p> #}
+                    </fieldset>
+                    <footer class="w3-container w3-teal w3-padding">
+                            <button class="w3-button w3-right w3-red" style="width:33.3%" type="submit">Suivant &raquo;</button>
+                    </footer>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+    $(function(){
+        document.getElementById('id01').style.display='block'
+    });
+        $('document').ready(function (){
+            /*$('#payment-form input').on('change', function() {
+                alert($('input[name=do_donate[amountOnce]]:checked', '#payment-form').val());
+            });*/
+            $("input[type=radio]").change(function() {
+                let val = $(this).val()
+                $(".recall .donation").text(val+' EUR');
+            });
+        });
+    </script>
+{% endblock %}

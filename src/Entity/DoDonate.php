@@ -57,13 +57,11 @@ class DoDonate
 
     /**
      * @ORM\Column(type="integer")
-     * @Assert\NotBlank(message="Le code postal est obligatoire.")
      */
     private $postal_code;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank(message="La ville est obligatoire.")
      */
     private $city;
 
