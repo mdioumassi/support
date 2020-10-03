@@ -7,15 +7,22 @@ use App\Form\DoDonateType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
 class DonateController extends AbstractController
 {
-    /**
-     * @Route("/donate", name="donate")
-     */
-    public function step1(Request $request, EntityManagerInterface $manager, SessionInterface $session)
+  /**
+   * STEP1 - Don
+   * @Route("/donate", name="donate")
+   *
+   * @param Request $request
+   * @param EntityManagerInterface $manager
+   * @param SessionInterface $session
+   * @return Response
+   */
+    public function donate(Request $request, EntityManagerInterface $manager, SessionInterface $session) : Response
     {
         $session->start();
         if($request->getMethod() == 'POST') {
@@ -29,14 +36,17 @@ class DonateController extends AbstractController
 
         return $this->render('donate/step1.html.twig');
     }
+    
     /**
-     * @Route("/step2" , name="mes_coordonnees")
+     * STEP 2 - Mes coordonnnees
+     * @Route("/mes-coordonnees" , name="mes_coordonnees")
      *
      * @param Request $request
-     * @param DoDonate $donate
-     * @return void
+     * @param EntityManagerInterface $manager
+     * @param SessionInterface $session
+     * @return Response
      */
-    public function step2(Request $request, EntityManagerInterface $manager, SessionInterface $session)
+    public function mesCoordonnees(Request $request, EntityManagerInterface $manager, SessionInterface $session) : Response
     {
         $session->start();
         $donate = new DoDonate();
@@ -68,12 +78,14 @@ class DonateController extends AbstractController
     }
 
     /**
-     * @Route("/step3", name="paiement")
+     * STEP3 - Paiement avec Stripe
+     * @Route("/paiement", name="paiement")
      *
      * @param Request $request
-     * @return void
+     * @param SessionInterface $session
+     * @return Response
      */
-    public function step3(Request $request, SessionInterface $session)
+    public function paiement(Request $request, SessionInterface $session) : Response
     {
         $session->start();
         $amount = $session->get('amount');
