@@ -95,8 +95,7 @@ label.required:before {
 #do_donate_receive_info{
     position: relative;
     left: 12px;
-    top: -30px;
-    float: right;
+    top: 5px;
 }
 #encart{
     height: 465px;
