@@ -65,7 +65,10 @@ class DonateController extends AbstractController
         }
             
         $session->set('amount', $amount);
+
         if ($form->isSubmitted() && $form->isValid()) {
+            $donateName = $form->getData()->getFirstname()." ". strtoupper($form->getData()->getLastname());
+            $session->set('donateName', $donateName);
             $manager->persist($donate);
             $manager->flush();
 
@@ -99,7 +102,8 @@ class DonateController extends AbstractController
         $client_secret = $intent->client_secret;
         return $this->render('donate/step3.html.twig', [
             'secret' => $client_secret,
-            'amount' => $amount
+            'amount' => $amount,
+            'donateName' => $session->get('donateName')
         ]);
 
     }

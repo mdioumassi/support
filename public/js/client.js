@@ -37,16 +37,17 @@ card.on('change', ({error}) => {
 });
 
 // On gère le paiement
-var cardButton  = document.getElementById('submit');
-var clientSecret  = cardButton.dataset.secret ;
-var form = document.getElementById('payment-form');
+let cardButton  = document.getElementById('submit');
+let clientSecret  = cardButton.dataset.secret ;
+let donateName = document.getElementById('donate_name').value;
+let form = document.getElementById('payment-form');
 form.addEventListener('submit', function(ev) {
-   // ev.preventDefault();
+    ev.preventDefault();
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
             card: card,
             billing_details: {
-                name: 'DIOUMASSI'
+                name: donateName
             }
         }
     }).then(function (result) {
