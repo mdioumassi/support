@@ -1,0 +1,37 @@
+{% extends 'admin.html.twig' %}
+
+{% block title %}Hello DonsController!{% endblock %}
+
+{% block body %}
+<table class="table">
+    <thead>
+      <tr>
+        <th>Civilité</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Email</th>
+        <th>Téléphone</th>
+        <th>Don</th>
+         <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for don in dons%}
+      <tr>
+        <td>{{don.civility}}</td>
+        <td>{{don.lastname}}</td>
+        <td>{{don.firstname}}</td>
+        <td>{{don.email}}</td>
+        <td>{{don.mobilePhone}}</td>
+        {% if don.amountFree %}
+            {% set montant = don.amountFree %}
+        {% else %}
+            {% set montant = don.amountOnce %}
+        {% endif %}
+        <td>{{montant}}</td>
+        <td>{{don.createdAt|date('d/m/Y')}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
