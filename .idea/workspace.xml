@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89929707-df09-4092-ae4f-eb3089a594f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3f26bec1-fd4f-4d38-a4b6-0723a026d5fc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3f26bec1-fd4f-4d38-a4b6-0723a026d5fc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/support.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/support.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/DoDonateType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/DoDonateType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,6 +205,7 @@
       <workItem from="1604498059130" duration="9000" />
       <workItem from="1604763161936" duration="471000" />
       <workItem from="1604765693488" duration="585000" />
+      <workItem from="1604781025048" duration="580000" />
     </task>
     <task id="LOCAL-00001" summary="Enregistrement en base">
       <created>1598137771249</created>
