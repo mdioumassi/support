@@ -3,6 +3,8 @@
 namespace App\Form;
 
 use App\Entity\DoDonate;
+use App\Entity\Parameter;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CountryType;
@@ -27,14 +29,18 @@ class DoDonateType extends AbstractType
             ->add('email', EmailType::class, [
                 'required' => true
             ])
-            ->add('civility', ChoiceType::class, [
+           /* ->add('civility', ChoiceType::class, [
                 'placeholder' => 'Choisir',
                 'choices'  => [
-                    'Mr' => 'monsieur',
-                    'Mme' => 'madame',
-                    'Mll' => 'mademoiselle',
+                    'monsieur' => 'Mr',
+                    'madame' => 'Mme',
+                    'mademoiselle' => 'Mlle',
                 ],
                 'required' => true
+            ])*/
+            ->add('civility', EntityType::class, [
+                'class' => Parameter::class,
+                'choice_label' => 'label'
             ])
             ->add('address')
             ->add('address_complement')
@@ -62,20 +68,6 @@ class DoDonateType extends AbstractType
                 'required' => true
             ])
             ->add('mobile_phone')
-         //   ->add('amount_free')
-     /*     ->add('amountOnce',ChoiceType::class,array(
-                'choices'  => array(
-                    '20€' => 20,
-                    '30€' => 30,
-                    '40€' => 40,
-                    '50€' => 50
-                ),
-       //         'data' => '20',
-                'expanded' => true,
-                'multiple' => false,
-                'required' => false,
-                'label' => false
-            ))*/
             ->add('receive_info')
         ;
     }

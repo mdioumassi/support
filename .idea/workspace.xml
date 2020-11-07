@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89929707-df09-4092-ae4f-eb3089a594f9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3f26bec1-fd4f-4d38-a4b6-0723a026d5fc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3f26bec1-fd4f-4d38-a4b6-0723a026d5fc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/support.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/support.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/donate/step2.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/donate/step2.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/DoDonateType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/DoDonateType.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,6 +135,8 @@
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/paypal/rest-api-sdk-php" />
       <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
+      <path value="$PROJECT_DIR$/vendor/symfonycasts/reset-password-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfonycasts/verify-email-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1fy3hpyKPsVEFozxFZoz0CLtWrm" />
@@ -143,7 +148,7 @@
     <property name="DatabaseDriversLRU" value="mariadb&#10;mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/PhpstormProjects/apiRest" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -203,6 +208,8 @@
       <workItem from="1604321828974" duration="1264000" />
       <workItem from="1604489699742" duration="605000" />
       <workItem from="1604498059130" duration="9000" />
+      <workItem from="1604763161936" duration="471000" />
+      <workItem from="1604765693488" duration="585000" />
     </task>
     <task id="LOCAL-00001" summary="Enregistrement en base">
       <created>1598137771249</created>
@@ -331,9 +338,10 @@
     <state x="860" y="402" width="311" height="263" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1040@0.0.1920.1040" timestamp="1597358867741" />
     <state x="649" y="313" width="362" height="261" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/67.27.1299.741@67.27.1299.741" timestamp="1598129006514" />
     <state x="1509" y="434" width="362" height="261" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/67.27.3219.1053@67.27.3219.1053" timestamp="1598053818764" />
-    <state x="545" y="163" width="672" height="466" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1598129156918">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state x="2073" y="198" width="672" height="466" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1604763277276">
+      <screen x="1366" y="0" width="1920" height="1080" />
     </state>
+    <state x="2073" y="198" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/1366.0.1920.1080/72.27.1294.741@1366.0.1920.1080" timestamp="1604763277276" />
     <state x="545" y="163" width="672" height="466" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/67.27.1299.741@67.27.1299.741" timestamp="1598129156918" />
     <state x="167" y="127" width="1099" height="543" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600382765338">
       <screen x="67" y="27" width="1299" height="741" />

@@ -1,24 +1,40 @@
 {% extends 'admin.html.twig' %}
 
-{% block title %}Hello AdminController!{% endblock %}
+{% block title %}Administration{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    {% for message in app.flashes('success') %}
-        <div class="alert alert-success" role="alert">{{ message }}</div>
-    {% endfor %}
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/mohamed/Dropbox/myDev/support/src/Controller/AdminController.php'|file_link(0) }}">src/Controller/AdminController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/mohamed/Dropbox/myDev/support/templates/admin/index.html.twig'|file_link(0) }}">templates/admin/index.html.twig</a></code></li>
-    </ul>
-</div>
+  <div class="w3-row">
+  <div class="w3-col s3">
+    <div class="w3-card-4 w3-padding-48 w3-center w3-round" style="width:365px">
+        <i class="fa fa-gears" style="font-size:90px;"></i>
+        <div class="w3-container w3-center w3-margin-top">
+            <a href="#">PARAMETRES</a>
+        </div>
+    </div>
+  </div>
+  <div class="w3-col s3">
+    <div class="w3-card-4 w3-padding-48 w3-center w3-round" style="width:365px">
+        <i class="fa fa-gears" style="font-size:90px;"></i>
+        <div class="w3-container w3-center w3-margin-top">
+            <a href="#">PARAMETRES</a>
+        </div>
+    </div>
+  </div>
+  <div class="w3-col s3">
+     <div class="w3-card-4 w3-padding-48 w3-center w3-round" style="width:365px">
+        <i class="fa fa-gears" style="font-size:90px;"></i>
+        <div class="w3-container w3-center w3-margin-top">
+            <a href="#">PARAMETRES</a>
+        </div>
+    </div>
+  </div>
+  <div class="w3-col s3">
+     <div class="w3-card-4 w3-padding-48 w3-center w3-round" style="width:365px">
+        <i class="fa fa-gears" style="font-size:90px;"></i>
+        <div class="w3-container w3-center w3-margin-top">
+            <a href="#">PARAMETRES</a>
+        </div>
+    </div>
+  </div>
+</div>        
 {% endblock %}

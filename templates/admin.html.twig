@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>W3.CSS Template</title>
+<title>Gestion des Items</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 .w3-sidebar {
@@ -24,7 +25,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 <div class="w3-top">
   <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-theme-l1">Logo</a>
+    <a href="{{path('admin_home')}}" class="w3-bar-item w3-button w3-theme-l1">Logo</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
   </div>
 </div>
@@ -38,7 +39,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   <a class="w3-bar-item w3-button w3-hover-black" href="{{path('admin_dons_home')}}">Gestion des dons</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="#">Gestion des membres</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="#">Gestion des parrains</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Gestion des paramètre</a>
 </nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -52,7 +53,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   
 
 
-
+{# 
   <footer id="myFooter">
     <div class="w3-container w3-theme-l2 w3-padding-32">
       <h4>Footer</h4>
@@ -61,7 +62,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <div class="w3-container w3-theme-l1">
       <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
     </div>
-  </footer>
+  </footer> #}
 
 <!-- END MAIN -->
 </div>

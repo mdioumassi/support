@@ -106,6 +106,8 @@
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/paypal/rest-api-sdk-php" />
       <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
+      <path value="$PROJECT_DIR$/vendor/symfonycasts/reset-password-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfonycasts/verify-email-bundle" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />

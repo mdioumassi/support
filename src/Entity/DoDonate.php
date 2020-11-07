@@ -143,7 +143,7 @@ class DoDonate
         return $this->civility;
     }
 
-    public function setCivility(string $civility): self
+    public function setCivility($civility): self
     {
         $this->civility = $civility;
 

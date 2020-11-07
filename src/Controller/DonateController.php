@@ -52,6 +52,7 @@ class DonateController extends AbstractController
         $donate = new DoDonate();
         $donate->setCreatedAt(new \DateTime());
         $form = $this->createForm(DoDonateType::class, $donate);
+        
         $form->handleRequest($request);
     
         if ($session->get('amountOnce')) {
