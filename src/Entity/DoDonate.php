@@ -12,6 +12,9 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class DoDonate
 {
+    const EN_ATTENTE = "PENDING";
+    const PAIEMENT = "PAID";
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -96,6 +99,16 @@ class DoDonate
      * @ORM\Column(type="datetime")
      */
     private $created_at;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $status;
+
+    public function __construct()
+    {
+        $this->status = self::EN_ATTENTE;
+    }
 
     public function getId(): ?int
     {
@@ -266,6 +279,18 @@ class DoDonate
     public function setCreatedAt(\DateTimeInterface $created_at): self
     {
         $this->created_at = $created_at;
+
+        return $this;
+    }
+
+    public function getStatus(): ?string
+    {
+        return $this->status;
+    }
+
+    public function setStatus(string $status): self
+    {
+        $this->status = $status;
 
         return $this;
     }

@@ -1,69 +1,79 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Faire un don!{% endblock %}
+{% block title %}Faire un don!
+{% endblock %}
 {% block stylesheets %}
-    {{ parent() }}
-    <link rel="stylesheet" href="{{ asset('/css/donate/style.css') }}" />
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('/css/donate/style.css') }}"/>
 {% endblock %}
 {% block body %}
-    <div id="page-wrapper">
-       <div id="id01" class="w3-modal">
-            <div class="w3-modal-content">
-                <header class="w3-container w3-teal">
-                <span onclick="document.getElementById('id01').style.display='none'"
-                class="w3-button w3-display-topright">&times;</span>
-                <h2>MON R&Egrave;GLEMENT</h2>
-                </header>
-                    <form id="payment-form" method="post">
-                      <div class="step-content" style="width:500px; margin-left:auto; margin-right: auto;">
-                            <div class="recall">
-                                <p>Vous allez faire un <span class="strong">
-                                        don unique de
-                                        <span class="donation">{{ amount }} EUR</span>
-                                    </span></p>
-                            </div>
+	<div id="page-wrapper">
+		<div id="id01" class="w3-modal">
+			<div class="w3-modal-content">
+				<header class="w3-container w3-teal">
+					<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+					<h2>MON R&Egrave;GLEMENT</h2>
+				</header>
+				<form id="payment-form" method="post">
+					<div class="step-content" style="width:500px; margin-left:auto; margin-right: auto;">
+						<div class="recall">
+							<p>Vous allez faire un
+								<span class="strong">
+									don unique de
+									<span class="donation">{{ amount }}
+										EUR</span>
+								</span>
+							</p>
+						</div>
 
-                            <div id="security-info">
-                                <p>Plateforme de paiement 100% sécurisée</p>
-                            </div>
-                            <div class="w3-panel w3-blue">
-                                <strong>Entrez vos informations bancaires.</strong>
-                            </div>
-                            <input class="w3-input w3-border" type="text" name="donate_name" id="donate_name" value="{{ donateName }}" placeholder="Nom complet">
-                            <div id="errors"></div><!--Contiendra les mesages d'erreurs de paiement -->
-                            <div id="card-element"><!--Stripe.js injects the Card Element--></div>
-                            <button id="submit" data-secret="{{ secret }}">
-                                <div class="spinner hidden" id="spinner"></div>
-                                <span id="button-text">PAYER</span>
-                            </button>
-                            <p id="card-errors" role="alert"></p>
-                            <p class="result-message hidden">
-                                Payment succeeded, see the result in your
-                                <a href="" target="_blank">Stripe dashboard.</a> Refresh the page to pay again.
-                            </p>
-                        </div>
-                        <footer class="w3-container w3-teal w3-padding">
-                                
-                        </footer>
-                 </form>
-            </div>
-        </div>
-    </div>
+						<div id="security-info">
+							<p>Plateforme de paiement 100% sécurisée</p>
+						</div>
+						<div class="w3-panel w3-blue">
+							<strong>Entrez vos informations bancaires.</strong>
+						</div>
+						<input class="w3-input w3-border" type="text" name="donate_name" id="donate_name" value="{{ donateName }}" placeholder="Nom complet">
+						<div id="errors"></div>
+						<!--Contiendra les mesages d'erreurs de paiement -->
+						<div id="card-element"><!--Stripe.js injects the Card Element--></div>
+						<button id="submit" data-secret="{{ clientSecret }}">
+							<div class="spinner hidden" id="spinner"></div>
+							<span id="button-text">PAYER</span>
+						</button>
+						<p id="card-errors" role="alert"></p>
+						<p class="result-message hidden">
+							Payment succeeded, see the result in your
+							<a href="" target="_blank">Stripe dashboard.</a>
+							Refresh the page to pay again.
+						</p>
+					</div>
+					<footer class="w3-container w3-teal w3-padding"></footer>
+				</form>
+			</div>
+		</div>
+	</div>
 {% endblock %}
 
 {% block javascripts %}
-    <script>
-    $(function(){
-        document.getElementById('id01').style.display='block'
-    });
-        $('document').ready(function (){
-            /*$('#payment-form input').on('change', function() {
-                alert($('input[name=do_donate[amountOnce]]:checked', '#payment-form').val());
-            });*/
-            $("input[type=radio]").change(function() {
-                let val = $(this).val()
-                $(".recall .donation").text(val+' EUR');
-            });
-        });
-    </script>
+	{{ parent() }}
+	<script src="https://js.stripe.com/v3/"></script>
+
+	<script>
+		$(function () {
+document.getElementById('id01').style.display = 'block'
+});
+$('document').ready(function () {
+$("input[type=radio]").change(function () {
+let val = $(this).val()
+$(".recall .donation").text(val + ' EUR');
+});
+});
+	</script>
+	<script>
+		const clientSecret = '{{ clientSecret }}';
+const stripePublicKey = "{{ stripePublicKey }}";
+const redirectAfterSuccessUrl = "{{ url('donate_payment_success', {'id': donateId}) }}";
+	</script>
+	<script src="/js/payment.js"></script>
+
 {% endblock %}
