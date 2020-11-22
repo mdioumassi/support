@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\DoDonate;
 use App\Form\DoDonateType;
+use App\Helper\Urls;
 use App\Stripe\StripeService;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -23,7 +24,7 @@ class DonateController extends AbstractController
      * @param SessionInterface $session
      * @return Response
      */
-    public function donate(Request $request, EntityManagerInterface $manager, SessionInterface $session): Response
+    public function donate(Request $request, EntityManagerInterface $manager, SessionInterface $session, Urls $url): Response
     {
         $session->start();
         if ($request->getMethod() == 'POST') {
@@ -35,7 +36,7 @@ class DonateController extends AbstractController
             return $this->redirectToRoute('mes_coordonnees');
         }
 
-        return $this->render('donate/step1.html.twig');
+        return $this->render('donate/step1.html.twig', ['urlSiteProd' => $url->getUrl()]);
     }
 
     /**
@@ -47,7 +48,7 @@ class DonateController extends AbstractController
      * @param SessionInterface $session
      * @return Response
      */
-    public function mesCoordonnees(Request $request, EntityManagerInterface $manager, SessionInterface $session): Response
+    public function mesCoordonnees(Request $request, EntityManagerInterface $manager, SessionInterface $session, Urls $url): Response
     {
         $session->start();
         $donate = new DoDonate();
@@ -78,6 +79,7 @@ class DonateController extends AbstractController
 
         return $this->render('donate/step2.html.twig', [
             'form' => $form->createView(),
+            'urlSiteProd' => $url->getUrl()
         ]);
     }
 
@@ -89,7 +91,7 @@ class DonateController extends AbstractController
      * @param SessionInterface $session
      * @return Response
      */
-    public function paiement(Request $request, SessionInterface $session, StripeService $stripeService, $donateId): Response
+    public function paiement(Request $request, SessionInterface $session, StripeService $stripeService, $donateId, Urls $url): Response
     {
         $session->start();
         $amount = $session->get('amount');
@@ -100,7 +102,8 @@ class DonateController extends AbstractController
             'amount' => $amount,
             'donateName' => $session->get('donateName'),
             'donateId' => $donateId,
-            'stripePublicKey' => $stripeService->getPublicKey()
+            'stripePublicKey' => $stripeService->getPublicKey(),
+            'urlSiteProd' => $url->getUrl()
         ]);
     }
 }

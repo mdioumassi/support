@@ -1,79 +1,79 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Faire un don!{% endblock %}
+{% block title %}Faire un don!
+{% endblock %}
 {% block stylesheets %}
-    {{ parent() }}
-    <link rel="stylesheet" href="{{ asset('/css/donate/style.css') }}" />
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('/css/donate/style.css') }}"/>
 {% endblock %}
 {% block body %}
-          <div id="id02" class="w3-modal">
-            <div class="w3-modal-content" style="">
-                <header class="w3-container w3-teal">
-                <span onclick="document.getElementById('id01').style.display='none'"
-                class="w3-button w3-display-topright">&times;</span>
-                <h2>MES COORDONNEES</h2>
-                </header>
-                {{ form_start(form, {'attr': {'novalidate': 'novalidate', 'class': 'w3-padding-top'}}) }}
-                            <div class="w3-row-padding">
-                                <div class="w3-half">
-                                    {{ form_label(form.email, 'Email') }}
-                                    {{ form_widget(form.email, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
-                                    {{ form_errors(form.email) }}
-                                </div>
-                                <div class="w3-half">
-                                    {{ form_label(form.civility, 'Civilité') }}
-                                    {{ form_widget(form.civility, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
-                                    {{ form_errors(form.civility) }}
-                               </div>
-                            </div>
-                            <div class="w3-row-padding">
-                                <div class="w3-half">
-                                    {{ form_label(form.firstname, 'Prénom') }}
-                                    {{ form_widget(form.firstname, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
-                                    {{ form_errors(form.firstname) }}
-                                 </div>
-                                 <div class="w3-half">
-                                    {{ form_label(form.lastname, 'Nom') }}
-                                    {{ form_widget(form.lastname, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
-                                    {{ form_errors(form.lastname) }}
-                                 </div>
-                            </div>
-                            <div class="w3-row-padding">
-                                <div class="w3-half">
-                                    {{ form_label(form.address, 'Adresse') }}
-                                    {{ form_widget(form.address, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
-                                    {{ form_errors(form.address) }}
-                                </div>
-                                 <div class="w3-half">
-                                    {{ form_label(form.address_complement, 'Complément adresse') }}
-                                    {{ form_widget(form.address_complement, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
-                                </div>
-                            </div>
-                            <div class="w3-row-padding">
-                                <div class="w3-half">
-                                    {{ form_label(form.postal_code, 'Code postal') }}
-                                    {{ form_widget(form.postal_code, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
-                                    {{ form_errors(form.postal_code) }}
-                                </div>
-                                <div class="w3-half">
-                                    {{ form_label(form.city, 'Ville') }}
-                                    {{ form_widget(form.city, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
-                                    {{ form_errors(form.postal_code) }}
-                                </div>
-                            </div>
-                             <div class="w3-row-padding">
-                                <div class="w3-half">
-                                    {{ form_label(form.country, 'Pays') }}
-                                    {{ form_widget(form.country, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
-                                </div>
+<div id="id02" class="w3-modal">
+	<div class="w3-modal-content" style="">
+		<header class="w3-container w3-teal">
+			<span onclick="closeWindow()" class="w3-button w3-display-topright">&times;</span>
+			<h2>MES COORDONNEES</h2>
+		</header>
+		{{ form_start(form, {'attr': {'novalidate': 'novalidate', 'class': 'w3-padding-top'}}) }}
+		<div class="w3-row-padding">
+			<div class="w3-half">
+				{{ form_label(form.email, 'Email') }}
+				{{ form_widget(form.email, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
+				{{ form_errors(form.email) }}
+			</div>
+			<div class="w3-half">
+				{{ form_label(form.civility, 'Civilité') }}
+				{{ form_widget(form.civility, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
+				{{ form_errors(form.civility) }}
+			</div>
+		</div>
+		<div class="w3-row-padding">
+			<div class="w3-half">
+				{{ form_label(form.firstname, 'Prénom') }}
+				{{ form_widget(form.firstname, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
+				{{ form_errors(form.firstname) }}
+			</div>
+			<div class="w3-half">
+				{{ form_label(form.lastname, 'Nom') }}
+				{{ form_widget(form.lastname, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
+				{{ form_errors(form.lastname) }}
+			</div>
+		</div>
+		<div class="w3-row-padding">
+			<div class="w3-half">
+				{{ form_label(form.address, 'Adresse') }}
+				{{ form_widget(form.address, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
+				{{ form_errors(form.address) }}
+			</div>
+			<div class="w3-half">
+				{{ form_label(form.address_complement, 'Complément adresse') }}
+				{{ form_widget(form.address_complement, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
+			</div>
+		</div>
+		<div class="w3-row-padding">
+			<div class="w3-half">
+				{{ form_label(form.postal_code, 'Code postal') }}
+				{{ form_widget(form.postal_code, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
+				{{ form_errors(form.postal_code) }}
+			</div>
+			<div class="w3-half">
+				{{ form_label(form.city, 'Ville') }}
+				{{ form_widget(form.city, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
+				{{ form_errors(form.postal_code) }}
+			</div>
+		</div>
+		<div class="w3-row-padding">
+			<div class="w3-half">
+				{{ form_label(form.country, 'Pays') }}
+				{{ form_widget(form.country, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
+			</div>
 
-                                <div class="w3-half">
-                                    {{ form_label(form.mobile_phone, 'Téléphone') }}
-                                    {{ form_widget(form.mobile_phone, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
-                                </div>
-                             </div>
-                            <div class="w3-padding">
-                                {{ form_label(form.receive_info, 'Oui, j\'accepte de recevoir des informations de Yattim-mr par e-mail et téléphone') }}
+			<div class="w3-half">
+				{{ form_label(form.mobile_phone, 'Téléphone') }}
+				{{ form_widget(form.mobile_phone, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
+			</div>
+		</div>
+		<div class="w3-padding">
+			{{ form_label(form.receive_info, 'Oui, j\'accepte de recevoir des informations de Yattim-mr par e-mail et téléphone') }}
                                 {{ form_widget(form.receive_info, {'attr': {'class': 'w3-check'}}) }}
                                 <span style="color: #ff0000; font-weight: bold; margin-left: 25px">*</span> Champs obligatoires
                             </div>
@@ -100,5 +100,8 @@
                 $(".recall .donation").text(val+' EUR');
             });
         });
+        function closeWindow() { // document.getElementById('id01').style.display = 'none';
+            window.location.href = "{{ urlSiteProd }}";
+        }
     </script>
 {% endblock %}

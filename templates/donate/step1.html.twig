@@ -1,79 +1,82 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Faire un don!{% endblock %}
+{% block title %}Faire un don!
+{% endblock %}
 {% block stylesheets %}
-    {{ parent() }}
-    <link rel="stylesheet" href="{{ asset('/css/donate/style.css') }}" />
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('/css/donate/style.css') }}"/>
 {% endblock %}
 {% block body %}
-    <div id="page-wrapper">
-       <div id="id01" class="w3-modal">
-            <div class="w3-modal-content">
-                <header class="w3-container w3-teal">
-                <span onclick="document.getElementById('id01').style.display='none'"
-                class="w3-button w3-display-topright">&times;</span>
-                <h2>MON DON</h2>
-                </header>
-                <form method="post">
-                    <div class="w3-container">
-                     <fieldset class="amount w3-padding">
-                                <ul class="radio-inline" id="amount-list-once">
-                                    <li>
-                                        <label>
-                                            <span id="value_of_amount-once-20">20€</span>
-                                           <input autocomplete="false" type="radio" name="amount-once" value="20" id="amount-once-20">
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <span id="value_of_amount-once-20">30€</span>
-                                           <input autocomplete="false" type="radio" name="amount-once" value="30" id="amount-once-30">
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <span id="value_of_amount-once-20">40€</span>
-                                           <input autocomplete="false" type="radio" name="amount-once" value="40" id="amount-once-40">
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <span id="value_of_amount-once-20">50€</span>
-                                            <input autocomplete="false" type="radio" name="amount-once" value="50" id="amount-once-50">
-                                    </li>
-                                </ul>
-                    </fieldset>
-                    <fieldset class="free-amount  w3-padding-16">
-                         <input type="number" id="amount_free" name="amount-free" placeholder="Montant libre" >
-                    </fieldset>
-                    </div>
-                    <footer class="w3-container w3-teal w3-padding">
-                            <button id="btnNext" class="w3-button w3-right w3-red w3-hide" style="width:33.3%" type="submit">Suivant &raquo;</button>
-                    </footer>
-                </form>
-            </div>
-        </div>
-    </div>
+	<div id="page-wrapper">
+		<div id="id01" class="w3-modal">
+			<div class="w3-modal-content">
+				<header class="w3-container w3-teal">
+					<span onclick="closeWindow()" class="w3-button w3-display-topright">&times;</span>
+					<h2>MON DON</h2>
+				</header>
+				<form method="post">
+					<div class="w3-container">
+						<fieldset class="amount w3-padding">
+							<ul class="radio-inline" id="amount-list-once">
+								<li>
+									<label>
+										<span id="value_of_amount-once-20">20€</span>
+										<input autocomplete="false" type="radio" name="amount-once" value="20" id="amount-once-20">
+									</label>
+								</li>
+								<li>
+									<label>
+										<span id="value_of_amount-once-20">30€</span>
+										<input autocomplete="false" type="radio" name="amount-once" value="30" id="amount-once-30">
+									</label>
+								</li>
+								<li>
+									<label>
+										<span id="value_of_amount-once-20">40€</span>
+										<input autocomplete="false" type="radio" name="amount-once" value="40" id="amount-once-40">
+									</label>
+								</li>
+								<li>
+									<label>
+										<span id="value_of_amount-once-20">50€</span>
+										<input autocomplete="false" type="radio" name="amount-once" value="50" id="amount-once-50"></li>
+								</li>
+							</ul>
+						</fieldset>
+						<fieldset class="free-amount  w3-padding-16">
+							<input type="number" id="amount_free" name="amount-free" placeholder="Montant libre">
+						</fieldset>
+					</div>
+					<footer class="w3-container w3-teal w3-padding">
+						<button id="btnNext" class="w3-button w3-right w3-red w3-hide" style="width:33.3%" type="submit">Suivant &raquo;</button>
+					</footer>
+				</form>
+			</div>
+		</div>
+	</div>
 {% endblock %}
 
 {% block javascripts %}
-    <script>
-    $(function(){
-        document.getElementById('id01').style.display='block'
-    });
-        $('document').ready(function (){
-            let amountFree = $("#amount_free").val();
-            if (amountFree) {
-                $("input[type=radio]").checked = false;
-            }
-            $("input[type=radio]").change(function() {
-               $("#amount_free").val('');
-               $("#btnNext").addClass('w3-show');
-            });
-            $("#amount_free").keyup(function() {
-                $("#btnNext").addClass('w3-show');
-            });
-            $("input[type=radio]").css({"margin-left":"20px"});
-        });
-    </script>
+	<script>
+		$(function () {
+document.getElementById('id01').style.display = 'block'
+});
+$('document').ready(function () {
+let amountFree = $("#amount_free").val();
+if (amountFree) {
+$("input[type=radio]").checked = false;
+}
+$("input[type=radio]").change(function () {
+$("#amount_free").val('');
+$("#btnNext").addClass('w3-show');
+});
+$("#amount_free").keyup(function () {
+$("#btnNext").addClass('w3-show');
+});
+$("input[type=radio]").css({"margin-left": "20px"});
+});
+function closeWindow() { // document.getElementById('id01').style.display = 'none';
+window.location.href = "{{ urlSiteProd }}";
+}
+	</script>
 {% endblock %}

@@ -11,7 +11,7 @@
 		<div id="id01" class="w3-modal">
 			<div class="w3-modal-content">
 				<header class="w3-container w3-teal">
-					<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+					<span onclick="closeWindow()" class="w3-button w3-display-topright">&times;</span>
 					<h2>MON R&Egrave;GLEMENT</h2>
 				</header>
 				<form id="payment-form" method="post">
@@ -73,6 +73,9 @@ $(".recall .donation").text(val + ' EUR');
 		const clientSecret = '{{ clientSecret }}';
 const stripePublicKey = "{{ stripePublicKey }}";
 const redirectAfterSuccessUrl = "{{ url('donate_payment_success', {'id': donateId}) }}";
+function closeWindow() { // document.getElementById('id01').style.display = 'none';
+window.location.href = "{{ urlSiteProd }}";
+}
 	</script>
 	<script src="/js/payment.js"></script>
 
