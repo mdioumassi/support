@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\DoDonate;
+use App\Helper\Urls;
 use App\Repository\DoDonateRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Routing\Annotation\Route;
@@ -13,7 +14,7 @@ class DonatePaymentSuccessController extends AbstractController
     /**
      * @Route("/donate/terminate/{id}", name="donate_payment_success")
      */
-    public function success($id, DoDonateRepository $donateRepository, EntityManagerInterface $em)
+    public function success($id, DoDonateRepository $donateRepository, EntityManagerInterface $em, Urls $url)
     {
         $donate = $donateRepository->find($id);
         if (!$donate) {
@@ -24,6 +25,6 @@ class DonatePaymentSuccessController extends AbstractController
 
         $this->addFlash('success', "Ce paiement a été payée et confirmée");
 
-        return $this->redirect("http://asso-yattim.dioumassi.website/");
+        return $this->redirect($url->getUrl());
     }
 }
