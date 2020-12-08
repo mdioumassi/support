@@ -25,6 +25,6 @@ class DonatePaymentSuccessController extends AbstractController
 
         $this->addFlash('success', "Ce paiement a été payée et confirmée");
 
-        return $this->redirect($url->getUrl());
+        return $this->redirect($url->getUrl() . '/donate/confirmation');
     }
 }

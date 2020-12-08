@@ -37,4 +37,5 @@ services:
 
   App\Helper\Urls:
     arguments:
-      $urlSiteProd: "%env(URL_SITE_PROD)%"
+      # $paymentConfirm: "%env(PAYMENT_CONFIRM)%"
+      $urlSite: "%env(URL_SITE_PROD)%"

@@ -6,6 +6,7 @@ use App\Entity\DoDonate;
 use App\Entity\Parameter;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CountryType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -29,15 +30,6 @@ class DoDonateType extends AbstractType
             ->add('email', EmailType::class, [
                 'required' => true
             ])
-           /* ->add('civility', ChoiceType::class, [
-                'placeholder' => 'Choisir',
-                'choices'  => [
-                    'monsieur' => 'Mr',
-                    'madame' => 'Mme',
-                    'mademoiselle' => 'Mlle',
-                ],
-                'required' => true
-            ])*/
             ->add('civility', EntityType::class, [
                 'class' => Parameter::class,
                 'choice_label' => 'label'
@@ -68,8 +60,10 @@ class DoDonateType extends AbstractType
                 'required' => true
             ])
             ->add('mobile_phone')
-            ->add('receive_info')
-        ;
+            ->add('receive_info', CheckboxType::class, [
+                'label' => 'Oui, j\'accepte de recevoir des informations de Yattim-mr par e-mail et téléphone',
+                'required' => false
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver)
