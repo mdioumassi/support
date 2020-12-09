@@ -1,0 +1,6 @@
+{% if donate.amountFree %}
+    {% set montant = donate.amountFree %}
+{% else %}
+    {% set montant = donate.amountOnce %}
+{% endif %}
+<h1>Merci!, pour votre don de <span style="color:red">{{ montant }} €</span> </h1>
