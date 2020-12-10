@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89929707-df09-4092-ae4f-eb3089a594f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20201210220006.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Newsletter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventDispatcher/NewsletterSubscriber.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3f26bec1-fd4f-4d38-a4b6-0723a026d5fc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3f26bec1-fd4f-4d38-a4b6-0723a026d5fc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DonatePaymentSuccessController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DonatePaymentSuccessController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +220,7 @@
       <workItem from="1607546886180" duration="6084000" />
       <workItem from="1607554782807" duration="317000" />
       <workItem from="1607555307951" duration="1543000" />
-      <workItem from="1607635288528" duration="5679000" />
+      <workItem from="1607635288528" duration="6786000" />
     </task>
     <task id="LOCAL-00001" summary="Enregistrement en base">
       <created>1598137771249</created>
@@ -304,7 +299,28 @@
       <option name="project" value="LOCAL" />
       <updated>1607556209843</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Newslletter">
+      <created>1607641401851</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1607641401851</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Newslletter">
+      <created>1607642399865</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1607642399865</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Newslletter">
+      <created>1607642632957</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1607642632957</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -318,6 +334,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Enregistrement en base" />
     <MESSAGE value="Paiement stripe" />
-    <option name="LAST_COMMIT_MESSAGE" value="Paiement stripe" />
+    <MESSAGE value="Newslletter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Newslletter" />
   </component>
 </project>
