@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89929707-df09-4092-ae4f-eb3089a594f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/dons/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/dons/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventDispatcher/DonateSuccessEmailSubscriber.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDispatcher/DonateSuccessEmailSubscriber.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +219,7 @@
       <workItem from="1607546886180" duration="6084000" />
       <workItem from="1607554782807" duration="317000" />
       <workItem from="1607555307951" duration="1543000" />
-      <workItem from="1607635288528" duration="7807000" />
+      <workItem from="1607635288528" duration="8127000" />
     </task>
     <task id="LOCAL-00001" summary="Enregistrement en base">
       <created>1598137771249</created>
@@ -335,7 +333,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607642926415</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Newslletter">
+      <created>1607643700080</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1607643700080</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Newslletter">
+      <created>1607643818945</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1607643818945</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
