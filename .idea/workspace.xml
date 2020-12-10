@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89929707-df09-4092-ae4f-eb3089a594f9" name="Default Changelist" comment="Paiement stripe">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/support.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/support.iml" afterDir="false" />
+    <list default="true" id="89929707-df09-4092-ae4f-eb3089a594f9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201210220006.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Newsletter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EventDispatcher/NewsletterSubscriber.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3f26bec1-fd4f-4d38-a4b6-0723a026d5fc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3f26bec1-fd4f-4d38-a4b6-0723a026d5fc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DonatePaymentSuccessController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DonatePaymentSuccessController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +150,7 @@
     <property name="DatabaseDriversLRU" value="mariadb&#10;mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/dev/shop" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -160,6 +163,11 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/EventDispatcher" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -216,7 +224,8 @@
       <workItem from="1607511458676" duration="3066000" />
       <workItem from="1607546886180" duration="6084000" />
       <workItem from="1607554782807" duration="317000" />
-      <workItem from="1607555307951" duration="687000" />
+      <workItem from="1607555307951" duration="1543000" />
+      <workItem from="1607635288528" duration="5679000" />
     </task>
     <task id="LOCAL-00001" summary="Enregistrement en base">
       <created>1598137771249</created>
@@ -281,7 +290,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607555734031</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Paiement stripe">
+      <created>1607556003478</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1607556003478</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Paiement stripe">
+      <created>1607556209843</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1607556209843</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">

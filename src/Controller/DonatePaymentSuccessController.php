@@ -30,9 +30,9 @@ class DonatePaymentSuccessController extends AbstractController
         }
         $donate->setStatus(DoDonate::PAIEMENT);
         $em->flush();
-        //lancer un evenement pour informer le donnateur de la bonne reception de son don
         $donateEvent = new DonateSuccessEvent($donate);
         $dispatcher->dispatch($donateEvent, 'donate.success');
+        $dispatcher->dispatch($donateEvent, 'donate.newsletter');
         $this->addFlash('success', "Ce paiement a été payée et confirmée");
 
         return $this->redirect($url->getUrl() . '/donate/confirmation');
