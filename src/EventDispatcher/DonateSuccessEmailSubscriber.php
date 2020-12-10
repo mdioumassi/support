@@ -34,8 +34,8 @@ class DonateSuccessEmailSubscriber implements EventSubscriberInterface
         $donate = $donateSuccessEvent->getDonate();
         $email = new TemplatedEmail();
         $email->to($donate->getEmail())
-              ->from(new Address("contact@yattim-mr.org", "Reception de votre don."))
-              ->subject("Merci!, votre don a bien été receptionnée")
+              ->from(new Address("contact@dioumassi.website", "Reception de votre don."))
+              ->subject("Reception du don!")
               ->htmlTemplate('emails/donate_success.html.twig')
               ->context([
                   'donate' => $donate
