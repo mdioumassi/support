@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89929707-df09-4092-ae4f-eb3089a594f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/EventDispatcher/DonateSuccessEmailSubscriber.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDispatcher/DonateSuccessEmailSubscriber.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/donate/step3.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/donate/step3.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +145,7 @@
     <property name="DatabaseDriversLRU" value="mariadb&#10;mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/dev/shop" />
+    <property name="last_opened_file_path" value="$USER_HOME$/html/d8-yattim-mr" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -220,6 +221,8 @@
       <workItem from="1607554782807" duration="317000" />
       <workItem from="1607555307951" duration="1543000" />
       <workItem from="1607635288528" duration="8127000" />
+      <workItem from="1607694303290" duration="6465000" />
+      <workItem from="1607776225996" duration="624000" />
     </task>
     <task id="LOCAL-00001" summary="Enregistrement en base">
       <created>1598137771249</created>
@@ -347,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607643818945</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Newslletter">
+      <created>1607698420042</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1607698420042</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
