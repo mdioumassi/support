@@ -17,7 +17,7 @@ class DonateController extends AbstractController
 {
     /**
      * STEP1 - Don
-     * @Route("/", name="donate")
+     * @Route("/donate", name="donate")
      *
      * @param Request $request
      * @param EntityManagerInterface $manager
