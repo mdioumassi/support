@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89929707-df09-4092-ae4f-eb3089a594f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="89929707-df09-4092-ae4f-eb3089a594f9" name="Default Changelist" comment="gitignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/donate/step3.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/donate/step3.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +228,7 @@
       <workItem from="1607935483389" duration="602000" />
       <workItem from="1607954251545" duration="2805000" />
       <workItem from="1608999035096" duration="58000" />
-      <workItem from="1609336806215" duration="1958000" />
+      <workItem from="1609336806215" duration="3175000" />
     </task>
     <task id="LOCAL-00001" summary="Enregistrement en base">
       <created>1598137771249</created>
@@ -405,7 +405,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609337188004</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="gitignore">
+      <created>1609339409625</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1609339409625</updated>
+    </task>
+    <task id="LOCAL-00027" summary="gitignore">
+      <created>1609340156249</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1609340156250</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -422,6 +436,7 @@
     <MESSAGE value="Newslletter" />
     <MESSAGE value="Merge branch 'master' into develop&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="donate" />
-    <option name="LAST_COMMIT_MESSAGE" value="donate" />
+    <MESSAGE value="gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
   </component>
 </project>
