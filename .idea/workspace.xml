@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89929707-df09-4092-ae4f-eb3089a594f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Controller/DonatePaymentSuccessController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DonatePaymentSuccessController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/ParameterCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/ParameterCategory.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,6 +229,52 @@
       <workItem from="1607954251545" duration="2805000" />
       <workItem from="1608999035096" duration="58000" />
       <workItem from="1609336806215" duration="4010000" />
+      <workItem from="1610446440873" duration="734000" />
+      <workItem from="1610448253219" duration="1216000" />
+      <workItem from="1610450280338" duration="884000" />
+      <workItem from="1610549678183" duration="1742000" />
+      <workItem from="1610552253955" duration="1355000" />
+      <workItem from="1610554078787" duration="1029000" />
+      <workItem from="1610568278303" duration="1206000" />
+      <workItem from="1610572868773" duration="598000" />
+      <workItem from="1610575115280" duration="706000" />
+      <workItem from="1610578271149" duration="603000" />
+      <workItem from="1610665198585" duration="674000" />
+      <workItem from="1610667014733" duration="599000" />
+      <workItem from="1610838017796" duration="31000" />
+      <workItem from="1612113134894" duration="1288000" />
+      <workItem from="1612116011349" duration="597000" />
+      <workItem from="1612117813231" duration="599000" />
+      <workItem from="1612119643203" duration="922000" />
+      <workItem from="1612121482071" duration="1213000" />
+      <workItem from="1612123304363" duration="599000" />
+      <workItem from="1612125308793" duration="599000" />
+      <workItem from="1612127538267" duration="599000" />
+      <workItem from="1612131305598" duration="598000" />
+      <workItem from="1612133125429" duration="595000" />
+      <workItem from="1612135095243" duration="1210000" />
+      <workItem from="1612136920930" duration="1203000" />
+      <workItem from="1612138750366" duration="599000" />
+      <workItem from="1612169275085" duration="596000" />
+      <workItem from="1612171906566" duration="598000" />
+      <workItem from="1612173477706" duration="593000" />
+      <workItem from="1612176897235" duration="1212000" />
+      <workItem from="1612178914952" duration="597000" />
+      <workItem from="1612187379982" duration="594000" />
+      <workItem from="1612189936182" duration="594000" />
+      <workItem from="1612192581722" duration="595000" />
+      <workItem from="1612206929071" duration="91000" />
+      <workItem from="1612207598203" duration="732000" />
+      <workItem from="1612208751188" duration="596000" />
+      <workItem from="1612212189327" duration="599000" />
+      <workItem from="1612214359691" duration="642000" />
+      <workItem from="1612217359866" duration="600000" />
+      <workItem from="1612219547972" duration="920000" />
+      <workItem from="1612221643415" duration="611000" />
+      <workItem from="1612223605998" duration="713000" />
+      <workItem from="1612283582518" duration="660000" />
+      <workItem from="1612299488756" duration="599000" />
+      <workItem from="1612304973825" duration="749000" />
     </task>
     <task id="LOCAL-00001" summary="Enregistrement en base">
       <created>1598137771249</created>
