@@ -5,6 +5,13 @@
 {% block stylesheets %}
 	{{ parent() }}
 	<link rel="stylesheet" href="{{ asset('css/donate/style.css') }}"/>
+	<style>
+		@media screen and (max-width: 600px) {
+			#card-contain{
+				width: 71%;
+			}
+		}
+	</style>
 {% endblock %}
 {% block body %}
 	<div id="page-wrapper">
@@ -25,7 +32,7 @@
 								</span>
 							</p>
 						</div>
-
+					<div id="card-contain">
 						<div id="security-info">
 							<p>Plateforme de paiement 100% sécurisée</p>
 						</div>

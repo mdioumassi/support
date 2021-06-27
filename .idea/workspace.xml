@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89929707-df09-4092-ae4f-eb3089a594f9" name="Default Changelist" comment="">
+    <list default="true" id="89929707-df09-4092-ae4f-eb3089a594f9" name="Default Changelist" comment="gitignore">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/ParameterCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/ParameterCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/donate/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/donate/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/donate/step3.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/donate/step3.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -275,6 +277,100 @@
       <workItem from="1612283582518" duration="660000" />
       <workItem from="1612299488756" duration="599000" />
       <workItem from="1612304973825" duration="749000" />
+      <workItem from="1612378231889" duration="860000" />
+      <workItem from="1612380394928" duration="599000" />
+      <workItem from="1612383148767" duration="599000" />
+      <workItem from="1612386645290" duration="599000" />
+      <workItem from="1612388455327" duration="761000" />
+      <workItem from="1612390310704" duration="626000" />
+      <workItem from="1612392153357" duration="642000" />
+      <workItem from="1612418892527" duration="617000" />
+      <workItem from="1612431109471" duration="971000" />
+      <workItem from="1612435058854" duration="602000" />
+      <workItem from="1612437096423" duration="631000" />
+      <workItem from="1612438911393" duration="615000" />
+      <workItem from="1612440996388" duration="625000" />
+      <workItem from="1612460302549" duration="598000" />
+      <workItem from="1612477412490" duration="598000" />
+      <workItem from="1612480950296" duration="816000" />
+      <workItem from="1612482818636" duration="1193000" />
+      <workItem from="1612484685711" duration="1163000" />
+      <workItem from="1612541344590" duration="1199000" />
+      <workItem from="1612543194196" duration="598000" />
+      <workItem from="1612553063104" duration="599000" />
+      <workItem from="1612555705220" duration="599000" />
+      <workItem from="1612561272073" duration="599000" />
+      <workItem from="1612563990651" duration="944000" />
+      <workItem from="1612565804211" duration="599000" />
+      <workItem from="1612649157744" duration="599000" />
+      <workItem from="1612650979245" duration="599000" />
+      <workItem from="1612652950261" duration="599000" />
+      <workItem from="1612655153794" duration="599000" />
+      <workItem from="1612657010303" duration="597000" />
+      <workItem from="1612658842139" duration="930000" />
+      <workItem from="1612660705063" duration="599000" />
+      <workItem from="1612662531019" duration="599000" />
+      <workItem from="1612696796968" duration="599000" />
+      <workItem from="1612698617753" duration="599000" />
+      <workItem from="1612708514529" duration="599000" />
+      <workItem from="1612710349604" duration="429000" />
+      <workItem from="1612788718241" duration="697000" />
+      <workItem from="1612790544088" duration="599000" />
+      <workItem from="1612794816001" duration="599000" />
+      <workItem from="1612802276327" duration="599000" />
+      <workItem from="1612821064694" duration="623000" />
+      <workItem from="1612822912903" duration="599000" />
+      <workItem from="1612824729471" duration="629000" />
+      <workItem from="1612826586854" duration="599000" />
+      <workItem from="1612828888374" duration="599000" />
+      <workItem from="1612831431293" duration="600000" />
+      <workItem from="1612833289397" duration="683000" />
+      <workItem from="1612835369590" duration="599000" />
+      <workItem from="1612837188615" duration="628000" />
+      <workItem from="1612839022497" duration="615000" />
+      <workItem from="1612874760307" duration="599000" />
+      <workItem from="1612877805344" duration="598000" />
+      <workItem from="1612879671311" duration="599000" />
+      <workItem from="1612881480068" duration="609000" />
+      <workItem from="1612883299609" duration="656000" />
+      <workItem from="1612885314777" duration="809000" />
+      <workItem from="1612888776848" duration="599000" />
+      <workItem from="1612899932282" duration="598000" />
+      <workItem from="1612901751393" duration="599000" />
+      <workItem from="1612903569323" duration="1197000" />
+      <workItem from="1612905602077" duration="607000" />
+      <workItem from="1612907465386" duration="616000" />
+      <workItem from="1612909280102" duration="672000" />
+      <workItem from="1612911103335" duration="598000" />
+      <workItem from="1612912937577" duration="599000" />
+      <workItem from="1612914813965" duration="630000" />
+      <workItem from="1612916627315" duration="616000" />
+      <workItem from="1612918758814" duration="621000" />
+      <workItem from="1612955502688" duration="599000" />
+      <workItem from="1612957342709" duration="768000" />
+      <workItem from="1612996840967" duration="599000" />
+      <workItem from="1612998659554" duration="599000" />
+      <workItem from="1613000652479" duration="644000" />
+      <workItem from="1613002556968" duration="601000" />
+      <workItem from="1613004364764" duration="600000" />
+      <workItem from="1613006185374" duration="1058000" />
+      <workItem from="1613033415051" duration="599000" />
+      <workItem from="1613036069342" duration="1098000" />
+      <workItem from="1613037913603" duration="624000" />
+      <workItem from="1613039762385" duration="666000" />
+      <workItem from="1613041582398" duration="619000" />
+      <workItem from="1613063059911" duration="685000" />
+      <workItem from="1613068512252" duration="599000" />
+      <workItem from="1613070358050" duration="640000" />
+      <workItem from="1613073402450" duration="599000" />
+      <workItem from="1613075223835" duration="1184000" />
+      <workItem from="1613077121527" duration="598000" />
+      <workItem from="1613079407567" duration="639000" />
+      <workItem from="1613080130273" duration="647000" />
+      <workItem from="1613082007898" duration="599000" />
+      <workItem from="1613200547870" duration="112000" />
+      <workItem from="1624729556400" duration="8944000" />
+      <workItem from="1624797062514" duration="5084000" />
     </task>
     <task id="LOCAL-00001" summary="Enregistrement en base">
       <created>1598137771249</created>
@@ -479,7 +575,35 @@
       <option name="project" value="LOCAL" />
       <updated>1609340806392</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="gitignore">
+      <created>1612378492389</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1612378492389</updated>
+    </task>
+    <task id="LOCAL-00031" summary="gitignore">
+      <created>1624798990324</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1624798990324</updated>
+    </task>
+    <task id="LOCAL-00032" summary="gitignore">
+      <created>1624799275000</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1624799275000</updated>
+    </task>
+    <task id="LOCAL-00033" summary="gitignore">
+      <created>1624799410588</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1624799410588</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
