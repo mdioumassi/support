@@ -5,6 +5,28 @@
 {% block stylesheets %}
 	{{ parent() }}
 	<link rel="stylesheet" href="{{ asset('css/donate/style.css') }}"/>
+	<style>
+		@media screen and (max-width: 600px) {
+			#footer-form {
+				width: 300px;
+			}
+
+			.free-amount input {
+				margin-left: -13px;
+				width: 135%;
+			}
+			form fieldset{
+				margin-left: -10px;
+			}
+			#amount-list-once {
+				margin-left: -2rem;
+			}
+			#amount-list-once li label span{
+				font-size: 12px;
+			}
+		}
+
+	</style>
 {% endblock %}
 {% block body %}
 	<div id="page-wrapper">
@@ -53,8 +75,10 @@
 							<input type="number" id="amount_free" name="amount-free" placeholder="Montant libre">
 						</fieldset>
 					</div>
-					<footer class="w3-container w3-teal w3-padding">
-						<button id="btnNext" class="w3-button w3-right w3-red w3-hide" style="width:24.3%; font-size:16px" type="submit">&nbsp;SUIVANT <i class="fa fa-address-card"></i></button>
+					<footer id="footer-form" class="w3-container w3-teal w3-padding">
+						<button id="btnNext" class="w3-button w3-right w3-red w3-hide" type="submit">&nbsp
+							SUIVANT <i class="fa fa-address-card"></i>
+						</button>
 					</footer>
 				</form>
 			</div>
