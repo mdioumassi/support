@@ -54,9 +54,15 @@
 						<div class="w3-dropdown-hover">
 							<button class="w3-button">Action</button>
 							<div class="w3-dropdown-content w3-bar-block w3-card-4">
-								<a href="#" class="w3-bar-item w3-button">Modifier</a>
-								<a href="#" class="w3-bar-item w3-button">Supprimer</a>
-								<a href="#" class="w3-bar-item w3-button">Contacter</a>
+								<a href="#" class="w3-bar-item w3-button">
+									<i class="fa fa-eye"></i> Voir
+								</a>
+								<a href="{{ path('admin_dons_edit',  {'id': don.id}) }}" class="w3-bar-item w3-button">
+									<i class="fa fa-edit"></i> Modifier
+								</a>
+								<a href="#" class="w3-bar-item w3-button">
+									<i class="fa fa-trash"></i> Supprimer
+								</a>
 							</div>
 						</div>
 					</td>
