@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89929707-df09-4092-ae4f-eb3089a594f9" name="Default Changelist" comment="gitignore">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="89929707-df09-4092-ae4f-eb3089a594f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/templates/admin/dons/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/dons/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -381,7 +378,7 @@
       <workItem from="1625405467797" duration="8812000" />
       <workItem from="1625999814955" duration="57000" />
       <workItem from="1626004124140" duration="4384000" />
-      <workItem from="1626019953816" duration="1520000" />
+      <workItem from="1626019953816" duration="1822000" />
     </task>
     <task id="LOCAL-00001" summary="Enregistrement en base">
       <created>1598137771249</created>
@@ -635,7 +632,28 @@
       <option name="project" value="LOCAL" />
       <updated>1626021089085</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="gitignore">
+      <created>1626021483080</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1626021483080</updated>
+    </task>
+    <task id="LOCAL-00038" summary="gitignore">
+      <created>1626021607171</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1626021607171</updated>
+    </task>
+    <task id="LOCAL-00039" summary="gitignore">
+      <created>1626021707108</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1626021707108</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">

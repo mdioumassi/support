@@ -35,6 +35,8 @@
 					<td>{{don.email}}</td>
 					{% if don.mobilePhone %}
 						<td>0{{don.mobilePhone}}</td>
+					{% else %}
+							<td></td>
 					{% endif %}
 					{% if don.amountFree %}
 						{% set montant = don.amountFree %}
