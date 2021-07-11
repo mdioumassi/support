@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="89929707-df09-4092-ae4f-eb3089a594f9" name="Default Changelist" comment="gitignore">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/donate/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/donate/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/donate/step3.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/donate/step3.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/dons/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/dons/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +147,12 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mariadb&#10;mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -371,6 +376,12 @@
       <workItem from="1613200547870" duration="112000" />
       <workItem from="1624729556400" duration="8944000" />
       <workItem from="1624797062514" duration="5084000" />
+      <workItem from="1625067239720" duration="328000" />
+      <workItem from="1625082590648" duration="1187000" />
+      <workItem from="1625405467797" duration="8812000" />
+      <workItem from="1625999814955" duration="57000" />
+      <workItem from="1626004124140" duration="4384000" />
+      <workItem from="1626019953816" duration="1520000" />
     </task>
     <task id="LOCAL-00001" summary="Enregistrement en base">
       <created>1598137771249</created>
@@ -603,7 +614,28 @@
       <option name="project" value="LOCAL" />
       <updated>1624799410588</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Redirect to home admin">
+      <created>1626015701787</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1626015701787</updated>
+    </task>
+    <task id="LOCAL-00035" summary="gitignore">
+      <created>1626020669149</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1626020669149</updated>
+    </task>
+    <task id="LOCAL-00036" summary="gitignore">
+      <created>1626021089085</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1626021089085</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -620,6 +652,7 @@
     <MESSAGE value="Newslletter" />
     <MESSAGE value="Merge branch 'master' into develop&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="donate" />
+    <MESSAGE value="Redirect to home admin" />
     <MESSAGE value="gitignore" />
     <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
   </component>

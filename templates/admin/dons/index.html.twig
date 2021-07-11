@@ -33,7 +33,9 @@
 					<td>{{don.lastname}}</td>
 					<td>{{don.firstname}}</td>
 					<td>{{don.email}}</td>
-					<td>0{{don.mobilePhone}}</td>
+					{% if don.mobilePhone is defined %}
+						<td>0{{don.mobilePhone}}</td>
+					{% endif %}
 					{% if don.amountFree %}
 						{% set montant = don.amountFree %}
 					{% else %}

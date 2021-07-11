@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="dataSourceStorageLocal" created-in="PS-211.7442.50">
+  <component name="dataSourceStorageLocal" created-in="PS-211.7628.25">
     <data-source name="support_dev@localhost" uuid="3f26bec1-fd4f-4d38-a4b6-0723a026d5fc">
       <database-info product="MySQL" version="8.0.22-0ubuntu0.20.04.3" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MYSQL" exact-version="8.0.22" exact-driver-version="8.0">
         <extra-name-characters>#@</extra-name-characters>
@@ -14,6 +14,12 @@
           <node kind="schema" qname="@" />
         </introspection-scope>
       </schema-mapping>
+    </data-source>
+    <data-source name="u600345197_items@185.224.137.8" uuid="48b3a9ec-c736-4bf9-be24-26f7d7661680">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>u600345197_items</user-name>
+      <schema-mapping />
     </data-source>
   </component>
 </project>
