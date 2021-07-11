@@ -23,12 +23,12 @@
 				<tr>
 					{% if don.civility == 'CIVILITE-MME' %}
 						<td><i class='fas fa-female' style='font-size:24px'></i> Mme</td>
-					{% endif %}
-					{% if don.civility == 'CIVILITE-MLLE' %}
+					{% elseif don.civility == 'CIVILITE-MLLE' %}
 						<td><i class='fas fa-female' style='font-size:24px'></i> Mlle</td>
-					{% endif %}
-					{% if don.civility == 'CIVILITE-M' %}
+					{% elseif don.civility == 'CIVILITE-M' %}
 						<td><i class='fas fa-male' style='font-size:24px'></i> Mr.</td>
+					{% else %}
+						<td></td>
 					{% endif %}
 					<td>{{don.lastname}}</td>
 					<td>{{don.firstname}}</td>
