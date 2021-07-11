@@ -21,9 +21,13 @@
 		<tbody>
 			{% for don in dons %}
 				<tr>
-					{% if don.civility == 'CIVILITE-MME' and don.civility == 'CIVILITE-MLLE' %}
+					{% if don.civility == 'CIVILITE-MME' %}
 						<td><i class='fas fa-female' style='font-size:24px'></i> Mme</td>
-					{% elseif don.civility == 'CIVILITE-M' %}
+					{% endif %}
+					{% if don.civility == 'CIVILITE-MLLE' %}
+						<td><i class='fas fa-female' style='font-size:24px'></i> Mlle</td>
+					{% endif %}
+					{% if don.civility == 'CIVILITE-M' %}
 						<td><i class='fas fa-male' style='font-size:24px'></i> Mr.</td>
 					{% endif %}
 					<td>{{don.lastname}}</td>
