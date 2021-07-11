@@ -47,4 +47,12 @@ class DoDonateRepository extends ServiceEntityRepository
         ;
     }
     */
+    public function findAllByCreatedAt()
+    {
+        return $this->createQueryBuilder('d')
+            ->orderBy('d.created_at', 'DESC')
+            ->getQuery()
+            ->getResult()
+            ;
+    }
 }

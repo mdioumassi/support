@@ -21,7 +21,7 @@ class DonsController extends AbstractController
     public function index(DoDonateRepository $donateRepository): Response
     {
         return $this->render('admin/dons/index.html.twig', [
-            'dons' => $donateRepository->findAll(),
+            'dons' => $donateRepository->findAllByCreatedAt(),
         ]);
     }
 }

@@ -15,30 +15,43 @@
 				<th>Dons</th>
 				<th>Status</th>
 				<th>Date</th>
+				<th>Actions</th>
 			</tr>
 		</thead>
 		<tbody>
 			{% for don in dons %}
 				<tr>
-					<td>
-						{% if don.civility == 'CIVILITE-M' %}
-							<i class='fas fa-male' style='font-size:24px'></i>
-						{% else %}
-							<i class='fas fa-female' style='font-size:24px'></i>
-						{% endif %}
-					</td>
+					{% if don.civility == 'CIVILITE-MME' and don.civility == 'CIVILITE-MLLE' %}
+						<td><i class='fas fa-female' style='font-size:24px'></i> Mme</td>
+					{% elseif don.civility == 'CIVILITE-M' %}
+						<td><i class='fas fa-male' style='font-size:24px'></i> Mr.</td>
+					{% endif %}
 					<td>{{don.lastname}}</td>
 					<td>{{don.firstname}}</td>
 					<td>{{don.email}}</td>
-					<td>{{don.mobilePhone}}</td>
+					<td>0{{don.mobilePhone}}</td>
 					{% if don.amountFree %}
 						{% set montant = don.amountFree %}
 					{% else %}
 						{% set montant = don.amountOnce %}
 					{% endif %}
-					<td>{{montant}}</td>
-					<td>{{don.status}}</td>
+					<td> <strong>{{montant}} €</strong></td>
+					{% if don.status == 'PAID' %}
+						<td><span class="w3-text-green"><strong>{{don.status}}</strong></span></td>
+					{% else %}
+						<td><span class="w3-text-red"><strong>{{don.status}}</strong></span></td>
+					{% endif %}
 					<td>{{don.createdAt|date('d/m/Y')}}</td>
+					<td>
+						<div class="w3-dropdown-hover">
+							<button class="w3-button">Action</button>
+							<div class="w3-dropdown-content w3-bar-block w3-card-4">
+								<a href="#" class="w3-bar-item w3-button">Modifier</a>
+								<a href="#" class="w3-bar-item w3-button">Supprimer</a>
+								<a href="#" class="w3-bar-item w3-button">Contacter</a>
+							</div>
+						</div>
+					</td>
 				</tr>
 			{% endfor %}
 		</tbody>
